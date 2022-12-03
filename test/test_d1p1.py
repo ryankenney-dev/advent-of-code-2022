@@ -1,4 +1,4 @@
-import day1.day1_part2 as day
+import d1p1 as day
 import unittest
 
 class TestDay1Part1(unittest.TestCase):
@@ -21,7 +21,7 @@ class TestDay1Part1(unittest.TestCase):
 9000
 
 10000'''
-        expected_sum: int = 45000
+        expected_max_calories: int = 24000
         
         # Execute
         # ----
@@ -29,4 +29,4 @@ class TestDay1Part1(unittest.TestCase):
 
         # Verify
         # ----
-        self.assertEqual(day.get_sum_of_calories_of_top_three_elves(elves_with_calorie_items), expected_sum)
+        self.assertEqual(day.get_max_calories_for_one_elf(elves_with_calorie_items), expected_max_calories)
