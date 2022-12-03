@@ -1,4 +1,4 @@
-import day1.day1_part2 as day1_part2
+import day1.day1_part2 as day
 import unittest
 
 class TestDay1Part1(unittest.TestCase):
@@ -25,8 +25,8 @@ class TestDay1Part1(unittest.TestCase):
         
         # Execute
         # ----
-        elves_with_calorie_items: day1_part2.ElvesWithCalorieItems = day1_part2.parse_input(message)
+        elves_with_calorie_items: day.ElvesWithCalorieItems = day.parse_input(message)
 
         # Verify
         # ----
-        self.assertEqual(day1_part2.get_sum_of_calories_of_top_three_elves(elves_with_calorie_items), expected_sum)
+        self.assertEqual(day.get_sum_of_calories_of_top_three_elves(elves_with_calorie_items), expected_sum)

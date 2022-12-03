@@ -1,7 +1,9 @@
 import day1.day1_part1 as d1p1
 import day1.day1_part2 as d1p2
+import day2.day2_part1 as d2p1
+import day2.day2_part2 as d2p2
 import argparse
-from typing import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List, Tuple
 
 # A version of argparse.ArgumentParser, that report errors
 # with a non-zero exit code
@@ -30,12 +32,28 @@ def d1p2_main() -> None:
     max_calories = d1p2.get_sum_of_calories_of_top_three_elves(elves_with_calorie_items)
     print("max_calories: %s" % max_calories)
 
+def d2p1_main() -> None:
+    with open("day2/input", 'r') as f:
+        message = f.read()
+    inputs: List[Tuple[str, str]] = d2p1.parse_input(message)
+    score: int = d2p1.compute_answer(inputs)
+    print("score: %s" % score)
+
+def d2p2_main() -> None:
+    with open("day2/input", 'r') as f:
+        message = f.read()
+    inputs: List[Tuple[str, str]] = d2p2.parse_input(message)
+    score: int = d2p2.compute_answer(inputs)
+    print("score: %s" % score)
+
 def main():
     config: Any = parse_args_or_exit()
     
     day_funcs: Dict[str, Callable[[], None]] = {
         "d1p1": d1p1_main,
         "d1p2": d1p2_main,
+        "d2p1": d2p1_main,
+        "d2p2": d2p2_main,
     }
     
     if config.puzzle == 'all':
