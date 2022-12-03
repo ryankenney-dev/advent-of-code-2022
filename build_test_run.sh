@@ -16,5 +16,5 @@ pipenv run python -m unittest discover test
 
 # Run main for all puzzles
 pipenv run python main.py --puzzle all
-#pipenv run python main.py --puzzle d24p1
+#pipenv run python main.py --puzzle d2p1
 
